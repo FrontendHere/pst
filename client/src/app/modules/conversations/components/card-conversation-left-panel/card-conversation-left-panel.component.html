@@ -1,0 +1,111 @@
+<div class="card-conversation-left-panel">
+    <!--Шапка-->
+    <div class="card-conversation-left-panel__block card-conversation-left-panel__block--header">
+        <div class="card-conversation-left-panel__header">
+            <i class="material-icons">
+                keyboard_backspace
+            </i>
+            <span class="card-conversation-left-panel__header-text">Переговоры</span>
+        </div>
+        <div class="card-conversation-left-panel__drugs-wrapper">
+            <div class="card-conversation-left-panel__drugs-left">
+                <img src="../../../assets/img/drugs/sinagis.png" alt="" class="card-conversation-left-panel__logo" width="33" height="77">
+            </div>
+            <div class="card-conversation-left-panel__drugs-right">
+                <span class="card-conversation-left-panel__drugs-desc">Препарат</span>
+                <span class="card-conversation-left-panel__drugs-name">Синагис®</span>
+            </div>
+        </div>
+    </div>
+    <!--Описание-->
+    <div class="card-conversation-left-panel__block card-conversation-left-panel__block--description">
+        <ul class="description__list">
+            <li class="description__item">
+                <span class="description__label">МНН: </span>
+                <span class="description__text">Паливизумаб</span>
+            </li>
+            <li class="description__item">
+                <span class="description__label">Нозология: </span>
+                <span class="description__text">B97.4 Респираторно-синцитиал...</span>
+            </li>
+            <li class="description__item">
+                <span class="description__label">Контрагент: </span>
+                <span class="description__text">Celgene</span>
+                <img class="description__logo" src="../../../assets/img/logos/l_celgene.png" alt="" width="43" height="37">
+            </li>
+            <li class="description__item">
+                <span class="description__label">Схемы взаимодействия: </span>
+                <span class="description__text">Дистрибуция</span>
+            </li>
+            <li class="description__item">
+                <span class="description__label">Фаза: </span>
+                <span class="description__text">Согласование условий</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="card-conversation-left-panel__block card-conversation-left-panel__block--2columns">
+        <span class="card-conversation-left-panel__label">Ожидаемая маржинальность: </span>
+        <span class="card-conversation-left-panel__text">
+            <span class="card-conversation-left-panel__marga">20,1</span> %
+        </span>
+    </div>
+    <!-- Участники -->
+    <div class="card-conversation-left-panel__block card-conversation-left-panel__block--2columns">
+        <span class="card-conversation-left-panel__label">Участники: </span>
+    </div>
+    <div class="card-conversation-left-panel__block card-conversation-left-panel__block--partners">
+        <ul class="partners__list">
+            <li class="partners__item">
+                <div class="partner__header">
+                    <span class="partner__name">Celgene</span>
+                    <img src="../../../assets/img/logos/l_celgene.png" alt="" class="partner__logo" width="42" height="42">
+                </div>
+                <div class="partner__worker">
+                    <div class="partner__worker-name">
+                        <app-person [user]="{name: 'Рыков А. П.', img: '../../../assets/img/users/maksimov.png'}"></app-person>
+                    </div>
+                    <div class="partner__worker-position">Ответственный</div>
+                </div>
+            </li>
+            <li class="partners__item">
+                <div class="partner__header">
+                    <span class="partner__name">Celgene</span>
+                    <img src="../../../assets/img/logos/l_celgene.png" alt="" class="partner__logo" width="42" height="42">
+                </div>
+                <div class="partner__worker">
+                    <div class="partner__worker-name">
+                        <app-person [user]="{name: 'Рыков А. П.', img: '../../../assets/img/users/maksimov.png'}"></app-person>
+                    </div>
+                    <div class="partner__worker-position">Лидер</div>
+                </div>
+                <div class="partner__worker">
+                    <div class="partner__worker-name">
+                        <app-person [user]="{name: 'Рыков А. П.', img: '../../../assets/img/users/maksimov.png'}"></app-person>
+                    </div>
+                    <div class="partner__worker-position">Администратор</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="card-conversation-left-panel__block card-conversation-left-panel__block--actions">
+        <div class="conversation-actions">
+            <div class="conversation-actions__list">
+                <a class="conversation-actions__item conversation-actions__item--add-conversation">Заполнить резюме</a>
+                <a
+                        class="conversation-actions__item conversation-actions__item--add-meet"
+                        [routerLink]="['/', 'conversations', 'new-event']"
+                        routerLinkActive="conversation-actions__item--active"
+                        pTooltip="Добавить встречу"
+                        tooltipPosition="right"
+                >Добавить встречу1</a>
+                <a class="conversation-actions__item conversation-actions__item--add-task">Добавить задачу</a>
+                <a class="conversation-actions__item conversation-actions__item--add-attach">Прикрепить файл</a>
+                <a class="conversation-actions__item conversation-actions__item--add-report">Создать отчет</a>
+                <a class="conversation-actions__item conversation-actions__item--arhiv">Архивировать переговоры</a>
+            </div>
+        </div>
+
+    </div>
+</div>

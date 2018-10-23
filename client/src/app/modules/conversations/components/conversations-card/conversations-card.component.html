@@ -1,0 +1,94 @@
+<ul class="card-conversation__list " [ngClass]="{'card-conversation__list--selected': selected}" (click)="selectItem()">
+    <li class="card-conversation__item card-conversation__item--desc card-conversation__item--position">
+        <span class="card-conversation__label">Препарат:</span>
+        <span class="card-conversation__text">{{item.drugname}}</span>
+        <span class="card-conversation__favorite card-conversation__favorite--green">
+            <i class="material-icons">
+            grade
+            </i>
+        </span>
+        <ul class="conversation-content-cards__actions-list">
+            <li class="conversation-content-cards__actions-item"
+                pTooltip="Открыть карточку переговоров"
+                tooltipPosition="top"
+                (click)="handleCreate('open-card')"
+            >
+                <div class="g-icons g-icons--toggle"></div>
+            </li>
+            <li class="conversation-content-cards__actions-item"
+                pTooltip="Добавить переговоры"
+                tooltipPosition="top"
+                (click)="handleCreate('conversation')"
+            >
+                <div class="g-icons g-icons--add-conversation"></div>
+            </li>
+            <li class="conversation-content-cards__actions-item"
+                pTooltip="Добавить встречу"
+                tooltipPosition="top"
+                (click)="handleCreate('meeting')"
+            >
+                <div class="g-icons g-icons--add-place"></div>
+            </li>
+            <li class="conversation-content-cards__actions-item"
+                pTooltip="Добавить задачу"
+                tooltipPosition="top"
+                (click)="handleCreate('task')"
+            >
+                <div class="g-icons g-icons--add-task"></div>
+            </li>
+            <li class="conversation-content-cards__actions-item"
+                pTooltip="Прикрепить файл"
+                tooltipPosition="top"
+                (click)="handleCreate('attachment')"
+            >
+                <div class="g-icons g-icons--add-attach"></div>
+            </li>
+            <li class="conversation-content-cards__actions-item"
+                pTooltip="Создать отчёт"
+                tooltipPosition="top"
+                (click)="handleCreate('report')"
+            >
+                <div class="g-icons g-icons--get-attach"></div>
+            </li>
+        </ul>
+    </li>
+
+    <li class="card-conversation__item card-conversation__item--desc">
+        <span class="card-conversation__label">MHH:</span>
+        <span class="card-conversation__text">{{item.mhh}}</span>
+    </li>
+    <li class="card-conversation__item card-conversation__item--desc card-conversation__item--accent">
+        <span class="card-conversation__label">Нозология:</span>
+        <span class="card-conversation__text">{{item.nozology}}</span>
+    </li>
+    <li class="card-conversation__item card-conversation__item--desc card-conversation__item--wrap ">
+        <div class="card-conversation__contractor-wrap">
+            <span class="card-conversation__label">Контрагент:</span>
+            <span class="card-conversation__text">{{item.contractor.name}}</span>
+        </div>
+        <img src="../../../assets/img/logos/{{item.contractor.img}}" alt="" class="card-conversation__contractor-logo">
+    </li>
+    <li class="card-conversation__item card-conversation__item--desc card-conversation__item--border-bottom">
+        <span class="card-conversation__label">Схема взаимодействия:</span>
+        <span class="card-conversation__text">{{item.distrib}}</span>
+    </li>
+    <li class="card-conversation__item ">
+        <app-preliminary-phase  [phaseId]="item.studyId"></app-preliminary-phase>
+    </li>
+    <li class="card-conversation__item card-conversation__item--wrap card-conversation__item--border-bottom">
+        <span class="card-conversation__label card-conversation__label--person">Лидер:</span>
+        <span class="card-conversation__person">
+              <app-person [user]="item.user"></app-person>
+        </span>
+
+    </li>
+    <li class="card-conversation__item">
+        <app-achievement-of-indicators></app-achievement-of-indicators>
+    </li>
+    <li class="card-conversation__item">
+        <span class="card-conversation__attention">
+           <i class="material-icons">error_outline</i>
+            2 просроченные задачи
+        </span>
+    </li>
+</ul>

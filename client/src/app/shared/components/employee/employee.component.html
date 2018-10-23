@@ -1,0 +1,19 @@
+<div class="employee"
+     [ngClass]="{
+        'employee--ltl' : direction === 'ltr',
+        'employee--rtl' : direction === 'rtl'
+    }">
+
+    <div class="employee__photo"
+         [ngClass]="{
+        'employee__photo--ltl' : direction === 'ltr',
+        'employee__photo--rtl' : direction === 'rtl'
+    }">
+        <img src="../../assets/img/users/{{employee.photo}}" alt="" width="30px" >
+    </div>
+    <div class="employee__desc">
+        <span class="employee__text" [class.employee__text--bold]="bolderName" >{{employee.name}}</span>
+        <span class="employee__position" *ngIf="needPosition">{{employee.position || "Ответственный"}}</span>
+    </div>
+
+</div>

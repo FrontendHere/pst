@@ -1,0 +1,373 @@
+.calendar-conversation-card{
+	display: flex;
+	box-shadow: 0 0 12px rgba(51, 51, 51, 0.1);
+	background-color: #fff;
+
+	&__list{
+		min-width: 286px;
+		width: 286px;
+		border-right: 1px solid #BDBDBD;
+	}
+
+	&__item{
+		padding: 9px 5px 9px 26px;
+		cursor: pointer;
+	}
+
+	&__item--accent{
+    	background: #E9F5EE;
+    	border-left: 3px solid #40A96D;
+	}	
+
+	&__label{	    
+	    color: #4F4F4F;
+		padding-right: 6px;
+		line-height: 14px;
+		font-size: 12px;
+		font-weight: normal;
+		margin: 0;
+	}
+
+	&__text{
+		line-height: 14px;
+		font-size: 12px;
+		font-weight: normal;
+		color: #000;
+		margin: 0;
+
+	}
+
+	&__top-label{
+		font-weight: 500;		
+	}
+
+	&__top-text{
+		line-height: 19px;
+		font-size: 16px;
+		color: #4F4F4F;
+		font-weight: 500;
+	}
+
+	&__p{
+		padding-bottom: 5px;
+		margin: 0;
+	}
+
+	&__preliminary-phase{
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		background-color: #2395D6;
+		border-radius: 50%;
+		margin-right: 5px;
+	}
+
+	&__photo{
+		padding:{
+			left: 5px;
+			right: 8px;
+		}
+	}
+
+	.conversation-content-cards__text{
+		color: #333;
+		font-weight: 500;		
+	}
+
+
+	&__milestones {
+		overflow-x: auto;
+		display: flex;
+		align-items: center;
+	  &-content {
+	    padding: 26px;
+	    min-width: 858px;
+	  }
+
+	  &-list {
+	    display: flex;
+	    height: 89px;
+	  }
+
+	  &-item {
+	    position: relative;
+	    width: 25%;
+	    height: 89px;
+	    border: 1px solid #BDBDBD;
+	    border-top-width: 0;
+	    background: #ffffff;
+
+
+
+	    &--end {
+	      width: 20px;
+	      border-bottom-width: 0;
+	      border-right-width: 0;
+	    }
+
+	    &-deviation{
+	    	border-left-color: #FF001F;
+	    }
+	  }
+
+	  &-frontier {
+	    position: absolute;
+	    width: 0;
+	    height: 100%;
+	    left: 70%;
+
+	    border-right: 1px solid #BDBDBD;
+	    bottom: 0;
+
+	    &:before {
+	      content: '';
+	      position: absolute;
+	      top: -5px;
+	      right: -5px;
+	      width: 9px;
+	      height: 9px;
+	      border-radius: 50%;
+	      background: #828282;
+	    }
+	  }
+
+	  &-frontier2 {
+	    position: absolute;
+	    width: 0;
+	    height: 70%;
+	    left: 80%;
+
+	    border-right: 1px solid #2395D6;
+	    bottom: 0;
+
+	    &:before {
+	      content: '';
+	      position: absolute;
+	      top: -5px;
+	      right: -5px;
+	      width: 9px;
+	      height: 9px;
+	      transform: rotate(45deg);
+	      background: #2395D6;
+	    }
+
+	    &:after {
+	      content: ' 15 июн';
+	      position: absolute;
+	      top: -25px;
+	      right: -15px;
+	      font-family: Roboto;
+	      font-style: normal;
+	      font-weight: 500;
+	      line-height: normal;
+	      font-size: 12px;
+	      text-align: center;
+	      letter-spacing: 0.004em;
+	      color: #2395D6;
+	      width: 41px;
+	    }
+	  }
+
+	  &-square {
+	    position: absolute;
+	    top: -10px;
+	    left: -10px;
+
+	    display: block;
+	    width: 19px;
+	    height: 19px;
+	    background: #27AE60;
+	    transform: rotate(45deg);
+
+	    &-deviation{
+	    	background-color: #FF001F;
+	    }
+
+	    &-end{
+	    	background-color: #E0E0E0;
+	    	&:before{
+			    content: '';
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    width: 9px;
+			    margin-right: auto;
+			    margin-left: auto;
+			    margin-top: 5px;
+			    height: 9px;
+			    background: #828282;
+			    border-radius: 50%;
+	    	}
+	    }
+	  }
+	  
+	  &-text {
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	    top: 0;
+
+	    display: flex;
+	    align-items: center;
+	    width: 109px;
+	    margin-right: auto;
+	    margin-left: auto;
+	    padding: 2px;
+	    padding-left: 14px;
+	    padding-top: 45%;
+
+
+	    font-family: Roboto;
+	    font-style: normal;
+	    font-weight: normal;
+	    line-height: normal;
+	    font-size: 14px;
+	    letter-spacing: 0.0025em;
+	    text-align: center;
+
+	    background: #ffffff;
+
+	    /* черный */
+	    color: #000000;
+
+		&-frontier{
+			color: #0088D6;
+		}	    
+
+	    .material-icons {
+	      position: absolute;
+	      left: 0;
+	      font-size: 16px;
+	      color: #4F4F4F;
+	    }
+	    
+	  }
+
+	  &-text-include{
+	  	position: absolute;
+	    right: 0;
+	    left: 0;
+	    display: flex;
+	    align-items: center;
+	    width: 140px;
+	    margin-right: auto;
+	    margin-left: auto;
+	    margin-top: 70px;
+	    padding: 2px;
+	    font-family: Roboto;
+	    font-style: normal;
+	    font-weight: normal;
+	    line-height: normal;
+	    font-size: 14px;
+	    letter-spacing: 0.0025em;
+	    text-align: left;
+	    background: #ffffff;
+	    color: #000000;
+	  }
+
+	  &-date {
+	    position: absolute;
+	    top: -35px;
+	    left: -20px;
+
+	    font-family: Roboto;
+	    font-style: normal;
+	    font-weight: normal;
+	    line-height: normal;
+	    font-size: 12px;
+	    text-align: center;
+	    letter-spacing: 0.004em;
+
+	    color: #4F4F4F;
+	  }
+
+	  &-deviation {
+	    position: absolute;
+	    left: -17px;
+	    bottom: 0;
+	    //top: 0;
+	    width: 17px;
+	    height: 87%;
+	    background: #E0E0E0;
+	    opacity: 0.1;
+	    border-left: 1px solid #828282;
+	  }
+
+	  &-prognosis-frontier {
+	    position: absolute;
+	    left: 17px;
+	    bottom: 0;
+	    top: 0;
+	    width: 0px;
+	    height: 100%;
+	    //background: #FF001F;
+
+	    border-left: 2px dashed #FF001F;
+	  }
+
+	  &-changes{
+	  	padding-left: 10px;
+    	display: flex;
+	  	font-size: 12px;
+	  	line-height: 14px;
+	  	position: absolute;
+    	bottom: -56px;
+    	left: 33px;
+	  	&:before{
+	  		display: block;
+	  		content: "";
+	  		background-color: #828282;
+	  		width: 9px;
+	  		min-width: 9px;
+		    height: 9px;
+		    margin-top: 3px;
+		    margin-right: 5px;
+	  		border-radius: 50%;
+	  	}
+	  }
+	}
+}
+
+
+
+
+.milestones-legend {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //padding-left: 35px;
+
+
+    /*.g-icons {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }*/
+    .material-icons {
+      color: #4F4F4F;
+    }
+  }
+
+  &__text {
+    margin-left: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 13px;
+    font-size: 12px;
+    letter-spacing: 0.0025em;
+
+    color: #4F4F4F;
+  }
+
+}

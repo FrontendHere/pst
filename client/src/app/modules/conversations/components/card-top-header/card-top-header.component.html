@@ -1,0 +1,48 @@
+<div class="card-top-header__wrapper">
+
+    <div class="card-top-header__left">
+        <span class="card-top-header__header">
+            Новая встреча
+        </span>
+    </div>
+    <div class="card-top-header__right">
+        <div class="card-top-header__wrap">
+            <span class="card-top-header__btn g-btns g-btns--success"
+                  [routerLink]="['/', 'conversations' ,'card']"
+                  routerLinkActive="conversation-menu__item--active"
+                  pTooltip="Сохранить"
+                  tooltipPosition="bottom"
+            >
+                Сохранить
+            </span>
+            <span class="card-top-header__btn g-btns"
+                  [routerLink]="['/', 'conversations' ,'card']"
+                  routerLinkActive="conversation-menu__item--active"
+                  pTooltip="Сохранить"
+                  tooltipPosition="bottom"
+            >
+
+                Отмена
+            </span>
+        </div>
+        <div class="card-top-header__wrap">
+            <span class="card-top-header__icon">
+                <i class="material-icons">
+                print
+                </i>
+            </span>
+            <span class="card-top-header__icon">
+                <i class="material-icons">
+                share
+                </i>
+            </span>
+            <span class="card-top-header__icon">
+                <i class="material-icons">
+timelapse
+</i>
+            </span>
+        </div>
+    </div>
+
+
+</div>

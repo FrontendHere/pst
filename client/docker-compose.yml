@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  client:
+    container_name: client
+    build:
+      context: .
+      dockerfile: DockerFile
+    tty: true
+    volumes:
+      - "../client/src:/var/www/client/src"
+      - "../global:/var/www/global"
+
+    ports:
+      - '80:80'

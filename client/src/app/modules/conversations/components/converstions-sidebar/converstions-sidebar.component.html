@@ -1,0 +1,39 @@
+<div class="conversation-panel" >
+    <div class="conversation-panel__filter">
+        <span class="filter__bth filter__bth--active" [ngClass]="{'filter__bth--active': isfilterAllBtn}" (click)="clickFilterBtn($event)">По всем переговорам</span>
+        <span class="filter__bth"  [ngClass]="{'filter__bth--active': isfilterSelectedBtn}"  (click)="clickFilterBtn($event)">По выбранным</span>
+    </div>
+    <app-conversation-panel-block [items]="items" [tpl]="tasksTpl" headerText = "Задачи моих подразделений" footerText = "задач"></app-conversation-panel-block>
+
+    <app-conversation-panel-block [items]="meetings" [tpl]="meetingsTpl" headerText = "Мои ближайшие встречи" footerText ="встреч"></app-conversation-panel-block>
+    <app-conversation-panel-block [items]="events" [tpl]="eventsTpl" headerText = "Скоро" footerText ="событий"></app-conversation-panel-block>
+
+</div>
+
+<!--Шаблон задачи моих подразделений-->
+<ng-template #tasksTpl let-value="val">
+    <div class="task-unit__header">
+        <span class="task-unit__status" [ngClass]="{'task-unit__status--expiried': value.expiried}">{{value.date}}</span>
+        <span class="task-unit__priority">{{value.priority}}</span>
+    </div>
+    <div class="task-unit__body">{{value.task}}</div>
+</ng-template>
+
+<!--Шаблон ближайших встреч-->
+<ng-template #meetingsTpl let-value="val">
+    <div class="meet__header">
+        <span class="meet__date">{{value.date}}</span>
+    </div>
+    <div class="meet__body">{{value.text}}</div>
+    <div class="meet__footer">{{value.subject}}</div>
+</ng-template>
+
+<!--Шаблон скоро-->
+<ng-template #eventsTpl let-value="val">
+    <div class="event__header">
+        <span class="event__date">{{value.date}}</span>
+    </div>
+    <div class="event__body">{{value.text}}</div>
+    <div class="event__footer">{{value.subject}}</div>
+</ng-template>
+

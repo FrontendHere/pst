@@ -1,0 +1,63 @@
+<p-dialog [(visible)]="visible"
+          modal="modal"
+          [responsive]="false"
+
+          [appendTo]="'body'"
+          [autoZIndex]="true"
+          styleClass="modal-actual"
+>
+    <!--    <p *ngIf="_modalActialService.data.length === 0" class="modal-actual__no-data">Нет изменений Actual</p>-->
+
+    <div id="modalFilter" class="modal-conversation-filter" >
+        <div class="modal-select__group-wrapper">
+            <div class="modal-select__wrapper">
+                <label for="select1" class="modal-select__label">Фазы</label>
+                <input type="text" class="modal-select__input" id="select1" value="Выбрано 8"></div>
+            <div class="modal-select__wrapper">
+                <label for="select2" class="modal-select__label">Контрагент</label>
+                <input type="text" class="modal-select__input" id="select2" value="Выбрано 8"></div>
+            <div class="modal-select__wrapper">
+                <label for="select3" class="modal-select__label">МНН.Препараты</label>
+                <input type="text" class="modal-select__input" id="select3" value="Выбрано 8"></div>
+            <div class="modal-select__wrapper">
+                <label for="select4" class="modal-select__label" >Лидер</label>
+                <input type="text" class="modal-select__input" id="select4" value="Выбрано 8">
+            </div>
+        </div>
+
+        <div class="modal-controls">
+
+            <div class="modal-controls__wrapper">
+                <div class="modal-controls__group">
+                    <div class="modal-controls__header">Группировка</div>
+                    <input type="checkbox" name="remember" id="remember1"> <label for="remember1" class="modal-controls__label">По контрагентам</label>
+                    <input type="checkbox" name="remember" id="remember2" checked> <label for="remember2" class="modal-controls__label">По контрагентам</label>
+                    <input type="checkbox" name="remember" id="remember3"> <label for="remember3" class="modal-controls__label">По контрагентам</label>
+
+                </div>
+                <div class="modal-controls__all-filter">
+                    <i class="material-icons">
+                        more_horiz
+                    </i>
+                    Все фильтры
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <div class="modal-btns">
+                <span class="g-btns g-btns--success" id="saveBtn" (click)="hide()">Применить</span>
+                <span class="g-btns" id="clearBtn" (click)="hide()">Очистить</span>
+            </div>
+            <div class="modal-save-view">
+                <i class="material-icons">
+                    playlist_add_check
+                </i>
+                <span class="modal-save-view__text">Сохранить представление</span>
+            </div>
+        </div>
+    </div>
+
+</p-dialog>
+
+

@@ -1,0 +1,11 @@
+.appWrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/deep/ router-outlet ~ * {
+  height: 100%;
+  width: 100%;
+  position: absolute
+}

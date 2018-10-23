@@ -1,0 +1,47 @@
+:host {
+  width: 100%;
+}
+.conversations-layout {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &--left {
+      position: relative;
+      width: 472px;
+      min-width: 472px;
+      //width: 320px;
+      border-right: 1px solid #BDBDBD;
+      overflow: hidden;
+
+    }
+
+    &--left-broader {
+      width: 472px;
+    }
+
+    &--center {
+      width: 100%;
+    }
+
+    &--right {
+      position: relative;
+      width: 364px;
+      min-width: 364px;
+      overflow: hidden;
+    }
+  }
+
+  &__content-wrapper {
+    padding: 24px;
+
+  }
+}

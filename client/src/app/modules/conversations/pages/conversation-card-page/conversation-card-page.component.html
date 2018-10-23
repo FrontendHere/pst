@@ -1,0 +1,227 @@
+<app-share-layout>
+    <app-conversation-card-layout>
+
+        <div class="card-content__wrapper-1" [perfectScrollbar]><div class="card-content__wrapper" >
+            <div class="card-content__left">
+                <div class="drug-card">
+                    <div class="drug-card__header">Синагис® (Synagis)</div>
+                    <div class="drug-card__list">
+                        <div class="drug-card__item">
+                            <span class="drug-card__label">МНН:</span>
+                            <span class="drug-card__text">Паливизумаб</span>
+                        </div>
+                        <div class="drug-card__item">
+                            <span class="drug-card__label">Нозология:</span>
+                            <span class="drug-card__text">B97.4 Респираторно-синцитиальный вирус</span>
+                        </div>
+                        <div class="drug-card__item">
+                            <span class="drug-card__label">Контрагент:</span>
+                            <span class="drug-card__text">Celgene</span>
+                        </div>
+                        <div class="drug-card__item">
+                            <span class="drug-card__label">Целевая схема взаимодействия:</span>
+                            <span class="drug-card__text">Дистрибуция</span>
+                        </div>
+                        <div class="drug-card__item">
+                            <span class="drug-card__label">Ожидаемая дата регистрации:</span>
+                            <span class="drug-card__text">22 декабря 2018 г.</span>
+                        </div>
+                        <div class="drug-card__item drug-card__item--concurents">
+                            <span class="drug-card__label">Контрагенты(2):</span>
+                            <ul class="drug-card-concurents__list">
+                                <li class="drug-card-concurents__item">
+                                    <div class="drug-card-concurents__name">Schmidt</div>
+                                    <div class="drug-card-concurents__logo"><img src="../../../assets/img/logos/l_schmidt.png" alt="" width="77" height="22"></div>
+                                </li>
+                                <li class="drug-card-concurents__item">
+                                    <div class="drug-card-concurents__name">СКТБ «Технолог»</div>
+                                    <div class="drug-card-concurents__logo"><img src="../../../assets/img/logos/l_technolog.png" alt="" width="77" height="22"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drug-card__item">
+                            <span class="drug-card__label">Описание:</span>
+                            <span class="drug-card__text">
+                                Паливизумаб представляет собой гуманизированные моноклональные антитела (IgG1к), полученные путем рекомбинантной ДНК-технологии.
+                                Молекула паливизумаба состоит из человеческих (95%) и мышиных (5%) последовательностей. Молекулярная масса примерно 148 кДа.
+                                Фармакологическое действие - противовирусное.
+                                Паливизумаб взаимодействует с эпитопом А антигена белка слияния (белок F) респираторного синцитиального вируса (РСВ).
+                                Паливизумаб проявляет выраженное нейтрализующее и ингибирующее действие на белки слияния штаммов РСВ подтипов А и В.
+                                Паливизумаб при концентрации в плазме крови...
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content__right">
+                <div class="card-content__block">
+                    <div class="card-content__block-header">Предстоящие встречи</div>
+                    <div class="card-content__block-content">
+                        <p-accordion expandIcon="pi pi-fw pi-caret-down" collapseIcon="pi pi-fw pi-caret-up">
+                            <p-accordionTab [selected]="true" >
+                                <p-header>
+                                    <div class="upcoming-meeting">
+                                        <span class="upcoming-meeting__text">Обсуждение логистических сложностей</span>
+                                        <span class="upcoming-meeting__date">10 июн 2018 в 10:00</span>
+                                        <span class="upcoming-meeting__tasks">1 задача</span>
+                                    </div>
+                                </p-header>
+                                <div class="upcoming-meeting-body">
+                                    <div class="upcoming-meeting-body__left">
+                                        <span class="upcoming-meeting-body__text">Выработка логистического договора</span>
+                                        <span class="upcoming-meeting-body__date">16 мая 2018 в 18:00</span>
+                                        <app-priority-btn [priority]="{class: 'high', text: 'Высокий'}"></app-priority-btn>
+                                    </div>
+                                    <div class="upcoming-meeting-body__right">
+                                        <img src="../../../assets/img/users/maksimov.png" alt="" class="upcoming-meeting-body__photo" width="48" height="48">
+                                    </div>
+                                </div>
+                            </p-accordionTab>
+                            <p-accordionTab>
+                                <p-header>
+                                    <div class="upcoming-meeting">
+                                        <span class="upcoming-meeting__text">Обсуждение нюансов в поставке сырья</span>
+                                        <span class="upcoming-meeting__date">20 мая 2018 в 18:30</span>
+                                        <span class="upcoming-meeting__tasks">5 задач</span>
+                                    </div>
+                                </p-header>
+                                Content 2
+                            </p-accordionTab>
+                            <p-accordionTab>
+                                <p-header>
+                                    <div class="upcoming-meeting">
+                                        <span class="upcoming-meeting__text">Сбой в производстве</span>
+                                        <span class="upcoming-meeting__date">17 мая 2018 в 19:00</span>
+                                        <span class="upcoming-meeting__tasks">2 задачи</span>
+                                    </div>
+                                </p-header>
+                                Content 3
+                            </p-accordionTab>
+                        </p-accordion>
+                    </div>
+                </div>
+                <div class="card-content__block">
+                    <div class="card-content__block-header">Задачи по процессу</div>
+                    <div class="card-content__block-content">
+                        <ul class="tasks-process__list">
+                            <li class="tasks-process__item tasks-process__item--org">
+                                <div class="tasks-process__left">
+                                    <div class="tasks-process__text-wrap">
+                                        <span class="tasks-process__text">Выполнить расчет оценки дополнительных инвестиций </span>
+                                    </div>
+                                    <span class="tasks-process__date">16 мая 2018 в 18:00</span>
+                                    <app-priority-btn [priority]="{class: 'high', text: 'Высокий'}"></app-priority-btn>
+                                </div>
+                                <div class="tasks-process__right">
+                                    <img src="../../../assets/img/users/maksimov.png" alt="" class="tasks-process__photo" width="48" height="48">
+                                </div>
+                                <div class="tasks-process__phase">
+                                    <app-preliminary-phase [needShort]="true" [phaseId]="1"></app-preliminary-phase>
+                                </div>
+                            </li>
+                            <li class="tasks-process__item">
+                                <div class="tasks-process__left">
+                                    <div class="tasks-process__text-wrap">
+                                        <span class="tasks-process__text">Оценка взаимодействия</span>
+                                        <i class="material-icons">
+                                            star
+                                        </i>
+                                    </div>
+                                    <span class="tasks-process__date">16 мая 2018 в 18:00</span>
+                                    <app-priority-btn [priority]="{class: 'low', text: 'Низкий'}"></app-priority-btn>
+                                </div>
+                                <div class="tasks-process__right">
+                                    <img src="../../../assets/img/users/maksimov.png" alt="" class="tasks-process__photo" width="48" height="48">
+                                </div>
+                            </li>
+                            <li class="tasks-process__item">
+                                <div class="tasks-process__left">
+                                    <div class="tasks-process__text-wrap">
+                                        <span class="tasks-process__text">Оценка взаимодействия</span>
+                                        <i class="material-icons">
+                                            star
+                                        </i>
+                                    </div>
+                                    <span class="tasks-process__date">16 мая 2018 в 18:00</span>
+                                    <app-priority-btn [priority]="{class: 'low', text: 'Низкий'}"></app-priority-btn>
+                                </div>
+                                <div class="tasks-process__right">
+                                    <img src="../../../assets/img/users/maksimov.png" alt="" class="tasks-process__photo" width="48" height="48">
+                                </div>
+                            </li>
+                            <li class="tasks-process__item">
+                                <div class="tasks-process__left">
+                                    <div class="tasks-process__text-wrap">
+                                        <span class="tasks-process__text">Выработка логистического договора</span>
+                                        <i class="material-icons">
+                                            star
+                                        </i>
+                                    </div>
+                                    <span class="tasks-process__date">16 мая 2018 в 18:00</span>
+                                    <app-priority-btn [priority]="{class: 'high', text: 'Высокий'}"></app-priority-btn>
+                                </div>
+                                <div class="tasks-process__right">
+                                    <img src="../../../assets/img/users/maksimov.png" alt="" class="tasks-process__photo" width="48" height="48">
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-content__center">
+                <app-milestones></app-milestones>
+            </div>
+            <div class="card-content__left">
+
+                <div class="card-content__block">
+                    <div class="card-content__block-header">Риски проекта</div>
+                    <div class="card-content__block-content card-content__block-content--padding">
+                        <div class="attention">
+                            <i class="material-icons">
+                                error_outline
+                            </i>
+                            <span class="attention__text">Сложный  процесс упаковки, 30% дефекта</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card-content__right">
+                <div class="card-content__block">
+                    <div class="card-content__block-header">Документы</div>
+                    <div class="card-content__block-content card-content__block-content--padding">
+                        <ul class="attach__list">
+                            <li class="attach__item">
+                                <div class="attach__left">
+                                    <div class="g-icons g-icons--pdf"></div>
+                                    <span class="attach__text">Схема логистики.pdf </span>
+                                    <span class="attach__size">700kb</span>
+                                </div>
+                                <div class="attach__right">
+                                    <span class="attach__date">14.05.18  13:40</span>
+                                </div>
+                            </li>
+                            <li class="attach__item">
+                                <div class="attach__left">
+                                    <div class="g-icons g-icons--img"></div>
+                                    <span class="attach__text">Варианты схем.png  </span>
+                                    <span class="attach__size">440kb</span>
+                                </div>
+                                <div class="attach__right">
+                                    <span class="attach__date">14.05.18  14:11</span>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div></div>
+    </app-conversation-card-layout>
+</app-share-layout>
+
+

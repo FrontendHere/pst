@@ -1,0 +1,8 @@
+<div class="person">
+    <img src="../../assets/img/users/{{user.img}}" alt="" class="person__photo">
+    <div class="person__desc">
+        <span class="person__text">{{user.name}}</span>
+        <span class="person__position" *ngIf="needPosition">{{user.position || "Ответственный"}}</span>
+    </div>
+
+</div>

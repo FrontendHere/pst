@@ -1,0 +1,11 @@
+<ul class="conversations-layout__list">
+    <li class="conversations-layout__item conversations-layout__item--left" [perfectScrollbar]>
+        <app-card-conversation-left-panel></app-card-conversation-left-panel>
+    </li>
+    <li class="conversations-layout__item conversations-layout__item--center">
+        <app-conversations-top-controls *ngIf="mode === 1" [btnsNav]="btnsNav"></app-conversations-top-controls>
+        <app-card-top-header *ngIf="mode === 2" ></app-card-top-header>
+        <ng-content></ng-content>
+    </li>
+
+</ul>

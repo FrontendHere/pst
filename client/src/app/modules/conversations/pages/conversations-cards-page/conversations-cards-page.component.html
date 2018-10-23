@@ -1,0 +1,17 @@
+<app-share-layout>
+    <app-conversations-layout>
+        <ng-container *ngIf="mode === 1" >
+            <div class="conversation-cards-list">
+                <ul class="conversation-cards-list__list" [perfectScrollbar]>
+                    <li class="conversation-cards-list__item" *ngFor="let item of items">
+                        <app-conversations-card [item]="item" ></app-conversations-card>
+                    </li>
+
+                </ul>
+            </div>
+        </ng-container>
+    </app-conversations-layout>
+
+</app-share-layout>
+
+

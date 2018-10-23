@@ -1,0 +1,52 @@
+<div class="conversation-top-controls-wrapper">
+    <div class="search">
+        <input class="search__input" type="search">
+    </div>
+    <div class="conversation-top-controls" [ngClass]="{'conversation-top-controls--center': !isNeedFilter}">
+        <div class="conversation-top-controls__list__left">
+
+        </div>
+        <ul class="conversation-top-controls__list">
+            <li class="conversation-top-controls__item" *ngFor="let btn of btnsNav">
+                <a class="conversation-top-controls__link"
+                   [routerLink]=btn.routerLink
+                   [routerLinkActive]=btn.class
+                   [pTooltip]=btn.tooltip
+                   [tooltipPosition]=btn.tooltipPosition
+                >{{btn.name}}</a>
+            </li>
+          <!--  <li class="conversation-top-controls__item">
+                <a class="conversation-top-controls__link"
+                   [routerLink]="['/', 'conversations', 'cards']"
+                   routerLinkActive="conversation-top-controls__link&#45;&#45;active"
+                   pTooltip="Показать выбранные переговоры как карточки"
+                   tooltipPosition="bottom"
+                >Карточки</a>
+            </li>
+            <li class="conversation-top-controls__item">
+                <a class="conversation-top-controls__link"
+                   [routerLink]="['/', 'conversations', 'list']"
+                   routerLinkActive="conversation-top-controls__link&#45;&#45;active"
+                   pTooltip="Показать выбранные переговоры в списке"
+                   tooltipPosition="bottom"
+                >Список</a>
+            </li>
+            <li class="conversation-top-controls__item">
+                <a class="conversation-top-controls__link"
+                   [routerLink]="['/', 'conversations', 'calendar']"
+                   routerLinkActive="conversation-top-controls__link&#45;&#45;active"
+                   pTooltip="Показать выбранные переговоры в календаре"
+                   tooltipPosition="bottom"
+                >Календарь</a>
+            </li>-->
+        </ul>
+        <div class="conversation-top-controls__filter"  *ngIf="isNeedFilter">
+            <span class="conversation-top-controls__filter-label">Фильтр</span>
+            <div class="conversation-top-controls__filter-icon">
+                <i class="material-icons rotate90" (click)="openDialog()">
+                    tune
+                </i>
+            </div>
+        </div>
+    </div>
+</div>

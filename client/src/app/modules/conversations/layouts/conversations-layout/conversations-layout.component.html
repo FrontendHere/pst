@@ -1,0 +1,13 @@
+<ul class="conversations-layout__list">
+    <li class="conversations-layout__item conversations-layout__item--left" [perfectScrollbar]>
+        <app-conversations-menu></app-conversations-menu>
+    </li>
+    <li class="conversations-layout__item conversations-layout__item--center">
+        <app-conversations-top-controls [btnsNav]="btnsNav" [isNeedFilter]="true"></app-conversations-top-controls>
+        <ng-content></ng-content>
+    </li>
+    <li class="conversations-layout__item conversations-layout__item--right"  [perfectScrollbar]>
+        <app-converstions-sidebar></app-converstions-sidebar>
+    </li>
+</ul>
+<app-converstaions-filter-modal></app-converstaions-filter-modal>

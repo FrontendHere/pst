@@ -1,0 +1,24 @@
+<app-share-layout>
+    <app-conversations-layout>
+        <div class="conversations-calendar__wrapper"  [perfectScrollbar]>
+        	<div class="conversations-calendar__top">
+        		<button class="btn">Сегодня</button>
+        		<div class="calendar">
+        			<i class="material-icons calendar__arrow">chevron_left</i>
+        			<span class="calendar__month">Август 2017</span>
+        			<i class="material-icons calendar__arrow">chevron_right</i>
+        		</div>
+        		<div class="conversations-calendar__top-buttons">
+        			<button class="btn btn-active conversations-calendar__top-button">Вехи</button>
+        			<button class="btn conversations-calendar__top-button">Встречи</button>
+        			<button class="btn conversations-calendar__top-button">Задачи</button>
+        		</div>
+        	</div>
+            <app-conversations-calendar-test [item]="item" ></app-conversations-calendar-test>
+            <p-schedule [events]="events" locale="ru"></p-schedule>
+        </div>
+    </app-conversations-layout>
+
+</app-share-layout>
+
+
